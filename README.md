@@ -1,4 +1,5 @@
-# vue-btd-components
+# english-Kid-Quarantine
+Children game to learn English. Developed during the quarantine caused by the SARS-CoV-2 virus in 2020.
 
 ## Project setup
 ```

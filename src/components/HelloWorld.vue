@@ -5,19 +5,11 @@
       <span>{{title}}</span>!
     </h1>
     <p>
-      Just a bunch of
-      <b>Vue Single File components</b> for use in your interfaces,
-      <br />here they are:
+      Children game to learn English. Developed during the quarantine caused by the
+      <b>SARS-CoV-2</b> virus in 2020.
+      <br />Here the game index:
       <router-link to="/catalog">Catalog</router-link>.
     </p>
-    <div class="custom-block tip">
-      <p class="custom-block-title">DISCLAIMER</p>
-      <p>
-        Use these components at your own risk. There is no official support service, although the 'Development Support team' will be happy to assist you.
-        You can modify the components as you wish according to your own needs.
-      </p>
-    </div>
-    <p></p>
     <div class="custom-block tip">
       <p class="custom-block-title">DEPENDENCIES</p>
       <p>
