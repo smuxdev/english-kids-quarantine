@@ -54,6 +54,15 @@ export default {
       // Game initialization
       if (val) {
         this.answers = [
+          { imgNumber: 1, answer: "Air", incorrect: false, used: false },
+          { imgNumber: 2, answer: "Sunlight", incorrect: false, used: false },
+          { imgNumber: 3, answer: "Soil", incorrect: false, used: false },
+          { imgNumber: 4, answer: "Roots", incorrect: false, used: false },
+          { imgNumber: 5, answer: "Stem", incorrect: false, used: false },
+          { imgNumber: 6, answer: "Leaves", incorrect: false, used: false },
+          { imgNumber: 7, answer: "Seeds", incorrect: false, used: false }
+        ];
+        /*
           { imgNumber: 1, answer: "Elephant", incorrect: false, used: false },
           { imgNumber: 2, answer: "Whale", incorrect: false, used: false },
           { imgNumber: 3, answer: "Jellyfish", incorrect: false, used: false },
@@ -61,7 +70,9 @@ export default {
           { imgNumber: 5, answer: "Bee", incorrect: false, used: false },
           { imgNumber: 6, answer: "Crocodile", incorrect: false, used: false },
           { imgNumber: 7, answer: "Owl", incorrect: false, used: false }
-        ];
+          */
+
+        this.answers = this.shuffle(this.answers);
         this.imgNumber = Math.floor(Math.random() * 7) + 1; // Select a random answer
       }
     }
@@ -72,27 +83,26 @@ export default {
     }
   },
   methods: {
-    checkAnswer(evt) {
-      function shuffle(array) {
-        var currentIndex = array.length,
-          temporaryValue,
-          randomIndex;
+    shuffle: function(array) {
+      var currentIndex = array.length,
+        temporaryValue,
+        randomIndex;
 
-        // While there remain elements to shuffle...
-        while (0 !== currentIndex) {
-          // Pick a remaining element...
-          randomIndex = Math.floor(Math.random() * currentIndex);
-          currentIndex -= 1;
+      // While there remain elements to shuffle...
+      while (0 !== currentIndex) {
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
 
-          // And swap it with the current element.
-          temporaryValue = array[currentIndex];
-          array[currentIndex] = array[randomIndex];
-          array[randomIndex] = temporaryValue;
-        }
-
-        return array;
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
       }
 
+      return array;
+    },
+    checkAnswer(evt) {
       function isUsed(answerNum) {
         for (let i = 0; i < this.answers.length; i++) {
           if (this.answers[i].imgNumber === answerNum && this.answers[i].used) {
@@ -148,7 +158,7 @@ export default {
           // New game config
           if (!allUsed.call(this)) {
             this.tipUsed = false;
-            this.answers = shuffle(this.answers);
+            this.answers = this.shuffle(this.answers);
 
             this.imgNumber = Math.floor(Math.random() * 7) + 1; // Select a random answer
             while (isUsed.call(this, this.imgNumber)) {
@@ -213,6 +223,10 @@ export default {
 }
 .game-board img {
   width: 30rem;
+}
+img {
+  border: none;
+  box-shadow: 0 0 10px black inset;
 }
 .word-list ul {
   cursor: pointer;
