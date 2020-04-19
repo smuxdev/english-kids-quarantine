@@ -1,6 +1,9 @@
 <template>
   <transition name="slide-fade">
-    <div class="end-game" v-show="endGame">Well Done!</div>
+    <div class="end-game" v-show="endGame">
+      Well Done!
+      <p>Points: {{points}}</p>
+    </div>
   </transition>
 </template>
 
@@ -18,6 +21,10 @@ export default {
     endGame: {
       default: true,
       type: Boolean
+    },
+    points: {
+      type: Number,
+      default: 0
     }
   }
 };

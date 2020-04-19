@@ -57,7 +57,7 @@ export default {
           { imgNumber: 1, answer: "Air", incorrect: false, used: false },
           { imgNumber: 2, answer: "Sunlight", incorrect: false, used: false },
           { imgNumber: 3, answer: "Soil", incorrect: false, used: false },
-          { imgNumber: 4, answer: "Roots", incorrect: false, used: false },
+          { imgNumber: 4, answer: "Root", incorrect: false, used: false },
           { imgNumber: 5, answer: "Stem", incorrect: false, used: false },
           { imgNumber: 6, answer: "Leaves", incorrect: false, used: false },
           { imgNumber: 7, answer: "Seeds", incorrect: false, used: false }

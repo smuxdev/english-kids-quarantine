@@ -13,8 +13,8 @@
 
     <ScoreBar :inGame="inGame" :points="points" :lives="lives" />
     <GameBoard :inGame="inGame" :points="points" :lives="lives" :tries="tries" />
-    <GameOver :gameOver="gameOver" />
-    <EndGame :endGame="endGame" />
+    <GameOver :gameOver="gameOver" :points="points" />
+    <EndGame :endGame="endGame" :points="points" />
 
     <footer class="footer">
       All images from: http://www.rawpixel.com
@@ -109,7 +109,6 @@ export default {
 
 <style scoped>
 .english-kids-quarantine {
-  max-width: 1000px;
 }
 a {
   text-decoration: none;

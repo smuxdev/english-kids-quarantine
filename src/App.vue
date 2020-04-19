@@ -1,14 +1,14 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>|
-      <router-link to="/catalog">Catalog</router-link>
-    </div>
     <router-view />
   </div>
 </template>
 
 <style>
+body {
+  margin: auto;
+  width: 1000px;
+}
 #app {
   font-family: Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -16,18 +16,11 @@
   text-align: center;
   overflow: hidden;
   color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #d3d3d3;
-}
-
-#nav a.router-link-exact-active {
-  color: #d7725a;
+  background: #fff;
+  margin: 2rem;
+  position: relative;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  min-height: 950px;
 }
 </style>

@@ -61,8 +61,7 @@ export default {
   margin-left: 0.5rem;
 }
 .start-button {
-  position: absolute;
-  left: 50%;
+  display: inline-block;
 }
 .start-button button {
   font-family: "Titan One", cursive;
