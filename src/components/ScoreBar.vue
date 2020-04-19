@@ -62,6 +62,8 @@ export default {
 }
 .start-button {
   display: inline-block;
+  position: absolute;
+  right: 45%;
 }
 .start-button button {
   font-family: "Titan One", cursive;

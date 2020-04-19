@@ -38,6 +38,11 @@ export default {
   font-size: 7rem;
   font-weight: 500;
 }
+.game-over p {
+  color: #bfca28;
+  font-size: 5rem;
+  font-weight: lighter;
+}
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s ease;

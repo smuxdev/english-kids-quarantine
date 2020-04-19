@@ -39,11 +39,11 @@
 
 <script>
 // @ is an alias to /src
-import GameTitle from "@/components/gameComponents/GameTitle.vue";
-import ScoreBar from "@/components/gameComponents/ScoreBar.vue";
-import GameBoard from "@/components/gameComponents/GameBoard.vue";
-import GameOver from "@/components/gameComponents/GameOver.vue";
-import EndGame from "@/components/gameComponents/EndGame.vue";
+import GameTitle from "@/components/GameTitle.vue";
+import ScoreBar from "@/components/ScoreBar.vue";
+import GameBoard from "@/components/GameBoard.vue";
+import GameOver from "@/components/GameOver.vue";
+import EndGame from "@/components/EndGame.vue";
 
 export default {
   name: "EnglishKidsQuarantine",
